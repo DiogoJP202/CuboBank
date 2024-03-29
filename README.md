@@ -18,7 +18,6 @@
 ```
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                 
 ## Projeto de ajustes e melhorias de um caixa eletrônico.
-### (⓿_⓿)(⓿_⓿)
 ## Instruções:
 ### Agora é hora de pensar! Com o projeto do caixa eletrônico, encontramos algumas questões que são muito importantes, mas não foram aplicadas. Vamos aplicá-las uma a uma. 
 
