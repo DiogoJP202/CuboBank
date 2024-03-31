@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: nicomoji;
+    src: url(../fonts/nicomoji/NicoMoji-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@keyframes rotate { 100% { transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg); } }
+
+:root{
+    --color0: #aaa;
+    --color1: #888;
+    --color2: #555;
+    --color3: #70FF00;
+    --color4: #66D1FF;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    background-color: var(--color1);
+    background-image: url(../imgs/FundoBorrado.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#atm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 540px;
+    text-align: center;
+    background-color: var(--color2);
+    border: 1px solid #000;
+    border-radius: 20px 20px 0 0;
+    font-family: 'Ubunto Mono', monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 5px;
+    padding: 10px;
+}
+
+h1{
+    font: normal bolder 3rem nicomoji, monospace;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#cubo{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    transform-style: preserve-3d;
+    animation: rotate 6s linear infinite;
+}
+
+#cubo > div{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--color4);
+    border: solid 3px #000;
+}
+
+#cubo .aresta:nth-child(1){
+    transform: translateZ(12px);
+}
+
+#cubo .aresta:nth-child(2){
+    transform: rotateY(90deg) translateZ(12px);
+}
+
+#cubo .aresta:nth-child(3){
+    transform: rotateY(180deg) translateZ(12px);
+}
+
+#cubo .aresta:nth-child(4){
+    transform: rotateX(90deg) translateZ(12px);
+}
+
+#cubo .aresta:nth-child(5){
+    transform: rotateY(-90deg) translateZ(12px);
+}
+
+#cubo .aresta:nth-child(6){
+    transform: rotateX(-90deg) translateZ(12px) rotateY(180deg);
+}
+
+main{   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+}
+
+main .botoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 10%;
+}
+
+main .botoes button{
+    width: 100%;
+    height: 10vw;
+    max-height: 40px;
+    background-color: #888;
+    border-radius: 25%;
+    border: 4px solid #ffffff80;
+}
+
+#tela{
+    width: 70%;
+    height: 100%;
+    background-color: var(--color4);
+    border-radius: 25px;
+}
+
+#Teclado{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    padding: 5px;
+    background-color: var(--color1);
+    border: 1px solid #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+#Teclado #numeros .numero{
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    font: normal bolder 1.5rem nicomoji, monospace;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    background-color: var(--color0);
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #000;
+}
+
+#Teclado #opcoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#Teclado #opcoes button{
+    padding: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+#Teclado #opcoes button:nth-child(1){
+    background-color: #64BA21;
+}
+
+#Teclado #opcoes button:nth-child(2){
+    background-color: #B04747;
+}
+
+#Teclado #opcoes button:nth-child(3){
+    background-color: #C9C10D;
+}
