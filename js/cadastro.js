@@ -23,7 +23,7 @@ const enviaFormulario = event => {
         if(user.usuario === usuario) return alert("Usuário já cadastrado!");
     };
     
-    usuarios.push({usuario: usuario, senha: senha});
+    usuarios.push({usuario: usuario, senha: senha, saldo: 100000});
     localStorage.setItem('usuarios', JSON.stringify(usuarios)); // Adiciona as informações do usuário para o armazenamento local.
 
     alert('Usuário cadastrado com sucesso!');

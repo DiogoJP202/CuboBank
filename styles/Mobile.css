@@ -122,8 +122,20 @@ main{
 main .botoes{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 10%;
+    position: relative;
+    top: 42px;
+}
+
+.btnAbaixo:nth-child(even){
+    position: relative;
+    top: -4px;
+}
+
+.btnAbaixo:nth-child(odd){
+    position: relative;
+    top: -10px;
 }
 
 button{
@@ -209,7 +221,7 @@ main .botoes button{
 #Teclado{
     display: flex;
     justify-content: space-between;
-    width: 200px;
+    width: 210px;
     padding: 5px;
     background-color: var(--color1);
     border: 1px solid #000;

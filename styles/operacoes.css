@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+:root{
+    --color5: #888;
+    --color6: #70FF00;
+}
+
+#conteudo h2{
+    font-size: 1em;
+    text-decoration: none;
+}
+
+#conteudo .linha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    font-size: 3em;
+}
+
+.operacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 50px;
+    padding: 5px;
+    font-size: 0.9rem !important;
+    font-weight: bold;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+main .botoes .active{
+    background-color: var(--color6);
+}
+
+main .botoes .active:active{
+    transform: scale(0.9);
+    transition: 0.03s ease-in-out;
+}
