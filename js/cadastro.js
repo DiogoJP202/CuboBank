@@ -1,4 +1,4 @@
-import adicionarUsuarioPadrao from "./moduloUsuarioPadrao.mjs";
+import adicionarUsuarioPadrao from "./moduloUsuarioPadrao.js";
 adicionarUsuarioPadrao();
 
 const form = document.querySelector("form"); 
@@ -23,5 +23,6 @@ form.addEventListener("submit", event => {
     usuarios.push({usuario: usuario, senha: senha});
     localStorage.setItem('usuarios', JSON.stringify(usuarios)); // Adiciona as informações do usuário para o armazenamento local.
 
+    alert('Usuário cadastrado com sucesso!');
     window.location.href = "../pages/Login.html"; // Muda o a página atual para a de login.
 });
