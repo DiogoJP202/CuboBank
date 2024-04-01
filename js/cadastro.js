@@ -1,10 +1,13 @@
 import adicionarUsuarioPadrao from "./moduloUsuarioPadrao.js";
+import opcoes from "./opcoes.js";
+import teclado, {contador, input, posicao} from "./teclado.js";
+
 adicionarUsuarioPadrao();
 
 const form = document.querySelector("form"); 
 
-form.addEventListener("submit", event => {
-    event.preventDefault();
+const enviaFormulario = event => {
+    if(event !== undefined) event.preventDefault();
 
     let usuario = document.querySelector("#Iusuario").value;
     let senha =  document.querySelector("#Isenha").value;
@@ -25,4 +28,6 @@ form.addEventListener("submit", event => {
 
     alert('Usuário cadastrado com sucesso!');
     window.location.href = "../pages/Login.html"; // Muda o a página atual para a de login.
-});
+};
+
+form.addEventListener("submit", enviaFormulario);
