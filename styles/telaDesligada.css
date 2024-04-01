@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+#Teclado #numeros .numero{
+    color: #000;
+}
+
+.desligado{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 25px;
+    transition: opacity 2s;
+}
+
+.desligado::before{
+    content: " ";
+    display: block;
+    position: relative;
+    left: 43%;
+    top: 17%;
+    width: 10%;
+    height: 40%;
+    background-color: var(--color3);
+    border-radius: 25px;
+    border: 5px solid #000;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.desligado::after{
+    content: " ";
+    display: block;
+    position: relative;
+    left: 21%;
+    top: -15%;
+    width: 50%;
+    height: 50%;
+    border: 10px solid var(--color3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#conteudo{
+    display: none;
+}

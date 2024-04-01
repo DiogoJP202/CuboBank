@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cubo Bank</title>
-    <link rel="stylesheet" href="styles/Mobile.css" media="all">
-    <link rel="stylesheet" href="styles/telaDesligada.css">
-    <link rel="stylesheet" href="styles/MediaQueries.css">
+    <title>Cubo Bank - Login</title>
+    <link rel="stylesheet" href="../styles/Mobile.css" media="all">
+    <link rel="stylesheet" href="../styles/MediaQueries.css">
 </head>
 <body>
     <div id="atm">
@@ -28,11 +27,17 @@
                 <button></button>
             </section>
             <div id="tela">
-                <div class="desligado"></div>
                 <div id="conteudo">
-                 <h2>Seja bem vindo</h2>
-                 <a href="pages/Login.html">Login</a> 
-                 <a href="pages/Cadastro.html">Cadastro</a>  
+                 <h2>Cadastro</h2>
+                 <form>
+                    <label for="Iusuario">Usuário: </label> <input type="text" name="usuario" id="Iusuario" placeholder="Seu nome de usuário aqui!" minlength="4">
+                    <label for="Isenha">Senha Pin: </label> <input type="password" name="senha" id="Isenha" placeholder="Sua senha aqui!" minlength="4" maxlength="4">
+                    <label for="IrepetirSenha">Repita a senha Pin: </label> <input type="password" name="repetirSenha" id="IrepetirSenha" placeholder="Sua senha aqui!" minlength="4" maxlength="4">
+                    <div id="botoesConteudo">
+                        <a href="../index.html">Voltar</a>
+                        <input type="submit" value="Cadastrar">
+                    </div>
+                 </form>
                 </div>
             </div>
             <section class="botoes">
@@ -69,6 +74,7 @@
             </section>
         </footer>
     </main>
-    <script src="script/script.js"></script>
+    <script type="module" src="../script/moduloUsuarioPadrao.mjs"></script>
+    <script src="../script/cadastro.js"></script>
 </body>
 </html>
