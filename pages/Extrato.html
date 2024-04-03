@@ -114,23 +114,21 @@
     </main>
     <script type="module">
         import opcoes from "../js/opcoes.js";
-        import {contador, input, posicao} from "../js/teclado.js";
     
         const extrato = document.querySelectorAll(".textoExtrato");
         let extratoArmazenados = JSON.parse(localStorage.getItem("usuarios"))[localStorage.getItem("posicaoUsuario")].extrato;
+        let contador = 0;
         const valores = [];
 
-        for(let valor of extrato) valores.push(valor);
+        for(let valor of extrato) valores.push(valor.innerHTML);
         for(let valor of extratoArmazenados) valores.push(valor);
         
+        if(extratoArmazenados) for(let valorExtrato of extratoArmazenados) valores.push(valorExtrato);
+
         let extratos = [];
-    
-        valores.push(1,2,3,4,5);
-        
         let posicaoExtrato = 0;
 
         for(let contador = 1; contador <= Math.ceil(valores.length / 5); contador++){ // A cada 5 valores do array 'valores', adiciona 1 array com esses valores na matrix de arrays 'extratos'.
-            console.log("trocou");
             extratos.push([]);
 
             for(let i = 0; i < 5 ; i++){
@@ -148,11 +146,23 @@
 
             if(element.classList.contains("left")){
                 if(contador === 0) return;
+                let elemento = 0;
+                contador --;
+                for(let valor of extratos[contador]){
+                    extrato[elemento].innerHTML = valor;
+                    elemento ++;
+                }
                 return;
             };
 
             if(element.classList.contains("right")){
-                if(contador === valores.length -1) return;
+                if(contador === Math.ceil(valores.length / 5) - 1) return;
+                let elemento = 0;
+                contador ++;
+                for(let valor of extratos[contador]){
+                    extrato[elemento].innerHTML = valor;
+                    elemento ++;
+                }
                 return;
             };
         });
