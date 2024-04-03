@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cubo Bank</title>
-    <link rel="stylesheet" href="../styles/Mobile.css" media="all">
-    <link rel="stylesheet" href="../styles/MediaQueries.css">
-    <link rel="stylesheet" href="../styles/operacoes.css">
+    <link rel="stylesheet" href="../assets/styles/Mobile.css" media="all">
+    <link rel="stylesheet" href="../assets/styles/MediaQueries.css">
+    <link rel="stylesheet" href="../assets/styles/operacoes.css">
 </head>
 <body>
     <div id="atm">
@@ -89,40 +89,6 @@
             </section>
         </footer>
     </main>
-    <script type="module">
-        import opcoes from "../js/opcoes.js";
-        import teclado, {contador, input, posicao} from "../js/teclado.js";
-
-        const nome = document.querySelector('.recepcao');
-        nome.innerHTML = localStorage.getItem('usuarioAtual');
-
-        document.addEventListener("click", e => {
-            const element = e.target;
-
-            if(element.classList.contains("active")){
-                const botoes =  document.querySelectorAll(".active");
-                
-                if(element === botoes[0]) return window.location.href = "../pages/Saldo.html";
-
-                if(element === botoes[1]) return window.location.href = "../pages/Extrato.html";
-
-                if(element === botoes[2]){
-                    console.log("Sacar");
-                }
-
-                if(element === botoes[3]){
-                    console.log("Depositar");
-                }
-
-                if(element === botoes[4]){
-                    console.log("Transferência");
-                }
-
-                if(element === botoes[5]){
-                    console.log("Sair");
-                }
-            }
-        });
-    </script>
+    <script type="module" src="../js/modules/operacoes.js"></script>
 </body>
 </html>

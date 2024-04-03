@@ -27,10 +27,18 @@ const enviaFormulario = event => {
     if(validado === true){
         localStorage.setItem("usuarioAtual", usuario);
         localStorage.setItem("posicaoUsuario", posicaoUsuario);
-        return window.location.href = "../pages/Operacoes.html"
+        return window.location.href = "../../pages/Operacoes.html"
     } 
     
     alert('Usuário ou Senha Inválidos!');
+    let tela = document.querySelector("#tela");
+    tela.classList.add("erro");
+    setTimeout(() => tela.classList.remove("erro"), 600);
 };
 
 form.addEventListener("submit", enviaFormulario);
+
+document.addEventListener("click", event => {
+    const element = event.target; 
+    if(element.classList.contains("enviar")) enviaFormulario();
+});

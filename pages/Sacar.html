@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assets/styles/Mobile.css" media="all">
     <link rel="stylesheet" href="../assets/styles/MediaQueries.css">
     <link rel="stylesheet" href="../assets/styles/operacoes.css">
+    <link rel="stylesheet" href="../assets/styles/animacaoErro.css">
     <style>
         .saldo{
             width: 100%;
@@ -35,6 +36,21 @@
         .operacao{
             width: 45%;
         }
+
+        #conteudo .linha:first-of-type{
+            position: relative;
+            top: 27px;
+        }
+
+        #conteudo form{
+            justify-content: center;
+            height: 30%;
+            font-size: 1em;
+        }
+
+        #Iusuario{
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
@@ -54,19 +70,21 @@
             <section class="botoes">
                 <button class="active"></button>
                 <button class="btnAbaixo"></button>
-                <button class="btnAbaixo"></button>
+                <button class="btnAbaixo active"></button>
             </section>
             <div id="tela">
                 <div id="conteudo">
                     <h2>
-                        SALDO
+                        SACAR
                     </h2>
                     <div class="linha">
                         &larr; <div class="operacao">VOLTAR</div>
                     </div>
-                    <div class="saldo">
-                        <h2>Saldo Atual</h2>
-                        <p class="textoSaldo"></p>
+                    <form>
+                        <label for="Isacar">Quantidade a ser retirada: </label> <input type="number" name="sacar" id="Isacar" placeholder="Valor aqui" minlength="4">
+                    </form>
+                    <div class="linha">
+                        &larr; <div class="operacao">SACAR</div>
                     </div>
                 </div>
             </div>
@@ -106,6 +124,6 @@
             </section>
         </footer>
     </main>
-    <script type="module" src="../js/modules/Saldo.js"></script>
+    <script type="module" src="../js/modules/sacar.js"></script>
 </body>
 </html>

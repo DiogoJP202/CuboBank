@@ -31,7 +31,7 @@ body{
     align-items: flex-end;
     height: 100vh;
     background-color: var(--color1);
-    background-image: url(../imgs/FundoBorrado.png);
+    background-image: url(../images/FundoBorrado.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -204,7 +204,7 @@ main .botoes button{
     font-weight: bold;
 }
 
-#conteudo form input[type=text], #conteudo form input[type=password]{
+#conteudo form input[type=text], #conteudo form input[type=password], #conteudo form input[type=number]{
     width: 100%;
     padding: 5px;
     font-size: 1.1rem;

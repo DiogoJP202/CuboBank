@@ -1,14 +1,12 @@
 export default document.addEventListener("click", event => {
     const element = event.target;
 
-    if(element.classList.contains("entrar")) return enviaFormulario();
-
     if(element.classList.contains("sair")){
         let confirmacao = window.confirm("deseja sair de sua conta?");
         if(confirmacao === true){
             let ligado = false;
             localStorage.setItem('tela', ligado);
-            window.location.href = "../index.html";
+            window.location.href = "../../index.html";
         };
     };
 
