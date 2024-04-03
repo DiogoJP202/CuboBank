@@ -5,18 +5,13 @@ import erro from "./erroEmTela.js";
 const enviaFormulario = event => {
     if(event !== undefined) event.preventDefault();
 
-    let saque = Number(document.querySelector("#Isacar").value);
+    let deposito = Number(document.querySelector("#Ideposito").value);
     let usuario = JSON.parse(localStorage.getItem("usuarios"))[localStorage.getItem("posicaoUsuario")];
     let saldoUsuario = usuario.saldo;
     let extrato = usuario.extrato;
 
-    if(saque > saldoUsuario){
-        alert("Saldo insuficiente!");
-        return erro();
-    };
-
-    if(saque <= 0){
-        alert("O valor de saque precisa ser pelo menos R$ 1.");
+    if(deposito <= 0){
+        alert("O valor do deposito precisa ser pelo menos R$ 1.");
         return erro();
     };
 
@@ -24,15 +19,15 @@ const enviaFormulario = event => {
     const senha = prompt("Insira a senha: ");
     
     if(senha === senhaUsuario){
-        saldoUsuario = saldoUsuario - saque;
+        saldoUsuario = saldoUsuario + deposito;
         let usuarios = JSON.parse(localStorage.getItem("usuarios"));
 
-        extrato.push(`Valor sacado <span class="negativo">R$ - ${saque}</span>`);
+        extrato.push(`Valor depositado <span class="positivo">R$ + ${deposito}</span>`);
 
         usuarios[localStorage.getItem("posicaoUsuario")].saldo = saldoUsuario;
         usuarios[localStorage.getItem("posicaoUsuario")].extrato = extrato;
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        localStorage.setItem("operacao", JSON.stringify(["SAQUE ", "O"]));
+        localStorage.setItem("operacao", JSON.stringify(["DEPOSITO ", "O"]));
         
         return window.location.href = "../../pages/OperacaoRealizada.html";
     };

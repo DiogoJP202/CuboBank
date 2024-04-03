@@ -1,6 +1,7 @@
 import adicionarUsuarioPadrao from "./moduloUsuarioPadrao.js";
 import opcoes from "./opcoes.js";
 import teclado, {contador, input, posicao} from "./teclado.js";
+import erro from "./erroEmTela.js";
 
 adicionarUsuarioPadrao();
 
@@ -13,12 +14,6 @@ const enviaFormulario = event => {
     let senha =  document.querySelector("#Isenha").value;
     let repeticaoSenha = document.querySelector("#IrepetirSenha").value;
     let usuarios = JSON.parse(localStorage.getItem('usuarios'));
-
-    const erro = () => {
-        let tela = document.querySelector("#tela");
-        tela.classList.add("erro");
-        setTimeout(() => tela.classList.remove("erro"), 600);
-    };
 
     if(usuario.length < 4){
         alert("Nome de usuário inválido!");

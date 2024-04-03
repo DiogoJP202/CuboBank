@@ -3,11 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cubo Bank - Login</title>
+    <title>Cubo Bank</title>
     <link rel="stylesheet" href="../assets/styles/Mobile.css" media="all">
     <link rel="stylesheet" href="../assets/styles/MediaQueries.css">
+    <link rel="stylesheet" href="../assets/styles/operacoes.css">
     <link rel="stylesheet" href="../assets/styles/animacaoErro.css">
     <style>
+        .saldo{
+            width: 100%;
+            height: 38%;    
+        }
+
+        .textoSaldo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 85%;
+            width: 90%;
+            margin: 10px;    
+            font-size: 1.4em;
+            color: #64BA21;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
+
+        #conteudo .linha{
+            justify-content: flex-start;
+            gap: 15px;
+        }
+
+        .operacao{
+            width: 45%;
+        }
+
+        #conteudo .linha:first-of-type{
+            position: relative;
+            top: 27px;
+        }
+
+        #conteudo form{
+            justify-content: center;
+            height: 30%;
+            font-size: 1em;
+        }
+
+        #Iusuario{
+            font-size: 0.9em;
+        }
+        
         #Teclado #numeros .numero{
             color: #0f0;
         }
@@ -28,28 +72,30 @@
         </header>
         <main>
             <section class="botoes">
-                <button></button>
-                <button></button>
-                <button></button>
+                <button class="active"></button>
+                <button class="btnAbaixo"></button>
+                <button class="btnAbaixo active"></button>
             </section>
             <div id="tela">
                 <div id="conteudo">
-                 <h2>Cadastro</h2>
-                 <form>
-                    <label for="Iusuario">Usuário: </label> <input type="text" name="usuario" id="Iusuario" placeholder="Seu nome de usuário aqui!" minlength="4">
-                    <label for="Isenha">Senha Pin: </label> <input type="password" name="senha" id="Isenha" placeholder="Sua senha aqui!" minlength="4" maxlength="4">
-                    <label for="IrepetirSenha">Repita a senha Pin: </label> <input type="password" name="repetirSenha" id="IrepetirSenha" placeholder="Sua senha aqui!" minlength="4" maxlength="4">
-                    <div id="botoesConteudo" class="enviar">
-                        <a href="../index.html">Voltar</a>
-                        <input type="submit" value="Cadastrar">
+                    <h2>
+                        DEPOSITO
+                    </h2>
+                    <div class="linha">
+                        &larr; <div class="operacao">VOLTAR</div>
                     </div>
-                 </form>
+                    <form>
+                        <label for="Ideposito">Quantidade a ser depositada: </label> <input type="number" name="deposito" id="Ideposito" placeholder="Valor aqui" minlength="4">
+                    </form>
+                    <div class="linha">
+                        &larr; <div class="operacao">DEPOSITAR</div>
+                    </div>
                 </div>
             </div>
             <section class="botoes">
-                <button></button>
-                <button></button>
-                <button></button>
+                <button class=""></button>
+                <button class="btnAbaixo"></button>
+                <button class="btnAbaixo"></button>
             </section>
         </main>
         <footer id="Teclado">
@@ -82,6 +128,6 @@
             </section>
         </footer>
     </main>
-    <script type="module" src="../js/modules/cadastro.js"></script>
+    <script type="module" src="../js/modules/deposito.js"></script>
 </body>
 </html>

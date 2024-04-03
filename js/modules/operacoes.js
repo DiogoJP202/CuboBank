@@ -16,9 +16,7 @@ document.addEventListener("click", e => {
 
         if(element === botoes[2]) return window.location.href = "../../pages/Sacar.html";
 
-        if(element === botoes[3]){
-            console.log("Depositar");
-        }
+        if(element === botoes[3]) return window.location.href = "../../pages/Deposito.html";
 
         if(element === botoes[4]){
             console.log("Transferência");

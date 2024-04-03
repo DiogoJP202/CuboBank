@@ -1,6 +1,7 @@
 import adicionarUsuarioPadrao from "./moduloUsuarioPadrao.js";
 import opcoes from "./opcoes.js";
 import teclado, {contador, input, posicao} from "./teclado.js";
+import erro from "./erroEmTela.js";
 
 adicionarUsuarioPadrao();
 window.alert("Usuário Padrão: admin, senha: 3589");
@@ -31,9 +32,7 @@ const enviaFormulario = event => {
     } 
     
     alert('Usuário ou Senha Inválidos!');
-    let tela = document.querySelector("#tela");
-    tela.classList.add("erro");
-    setTimeout(() => tela.classList.remove("erro"), 600);
+    return erro();
 };
 
 form.addEventListener("submit", enviaFormulario);
