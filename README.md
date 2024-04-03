@@ -1,4 +1,4 @@
-#  CUBO BANK 
+# 💲 CUBO BANK 💲
 ```⠀⠀
       ⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣴⣾⣿⣿⣷⣦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -17,31 +17,34 @@
 ```
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                 
 ## Projeto de ajustes e melhorias de um caixa eletrônico.
-## Instruções:
-### Agora é hora de pensar! Com o projeto do caixa eletrônico, encontramos algumas questões que são muito importantes, mas não foram aplicadas. Vamos aplicá-las uma a uma. 
 
-- Ao acessar o sistema, pergunte o nome do usuário e diga "Olá {Nome} é um prazer ter você por aqui!".
+![image](https://github.com/DiogoJP202/CuboBank/assets/102389309/ca3d5fba-8060-46ac-b42d-c855322af53d)
 
-- Na função "inicio", utilize escolha/caso (switch/case) para validar a opção escolhida pelo usuário. 
+![image](https://github.com/DiogoJP202/CuboBank/assets/102389309/8e078daf-7821-4da6-8dc9-4796d6384528)
 
-- Sempre que o usuário for sacar dinheiro, o valor restante não pode ser negativo, ou seja, caso o usuário tente sacar mais do que tem em saldo, a ação não deve ocorrer. Exiba uma mensagem de "Operação não autorizada". 
 
-- Sempre que o usuário for sacar dinheiro, o valor a ser sacado não pode ser igual ou menor que zero. Exiba uma mensagem de "Operação não autorizada". 
+## 👨‍💻 Tecnologias utilizadas:
+- HTML
+- CSS
+- Javascript
 
-- Adicionar a opção para ver o extrato (Coloque algumas compras ou depósitos fictícios). 
+## 🔗 Links:
+- <a href="https://www.figma.com/file/sqCMtN7lLwFNWi2umwcnP1/Cube_ATM?type=design&node-id=0%3A1&mode=design&t=dv44jhsMIB9b6VlU-1">FIGMA</a></li>
+- <a href="https://diogojp202.github.io/FreedonLents/](https://diogojp202.github.io/CuboBank/index.html">Projeto</a></li>
 
-- Adicionar a opção para fazer uma transferência. A transferência consiste em você informar o número de uma conta (pode ser qualquer número, mas obrigatoriamente um número, ou seja, nenhum outro caractere deve ser aceito), perguntar o valor da transferência e remover o valor da conta da mesma forma como na ação do saldo. Caso o usuário tente transferir mais do que tem em saldo, a ação não deve ocorrer. Exiba uma mensagem de "Operação não autorizada". 
+## 👁‍🗨⚙ Características do site
 
-- Sempre que o usuário for transferir dinheiro,  o valor a ser transferido não pode ser igual ou menor que zero, ou seja, caso o usuário tente transferir mais do que tem em saldo, a ação não deve ocorrer. Exiba uma mensagem de "Operação não autorizada". 
+- Cadastro e login de usuários;
+- Responsividade para telas menores;
+- Formas desenvolvidas com CSS puro;
+- Responsividade Dinâmica;
+- Animações css;
+- Interação das páginas com os dados dos usuários;
+- Armazenamento de dados dos usuários via localStorage;
 
-- No menu principal, a ordem das opções deve ser: Saldo, Extrato, Saque, Depósito, Transferência e Sair. 
+![image](https://github.com/DiogoJP202/CuboBank/assets/102389309/134293f2-44af-4537-b84b-56cf6d98866b)
 
-- Atualize a função "erro" com as novas opções do menu.
+Informações Adicionais ℹ:
+![image](https://github.com/DiogoJP202/CuboBank/assets/102389309/03a8ad94-8e32-47de-862d-baa63118d887)
 
-- Caso o usuário informe um valor para depósito igual ou menor que zero, não deixe a operação ocorrer. Exiba uma mensagem de "Operação não autorizada". 
 
-- Sempre que o usuário for acessar o saldo, sacar, retirar o extrato ou transferir dinheiro é necessário que ele informe uma senha. Essa senha deve ser validada com uma condicional. A senha é 3589.
-
-- Caso a senha informada não seja a correta, é necessário chamar a função atual novamente. 
-
-- Quando o usuário escolher sair do sistema, exiba uma mensagem agradecendo por utilizar os serviços do banco: "{Nome}, foi um prazer ter você por aqui!".
