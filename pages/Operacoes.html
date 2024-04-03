@@ -102,11 +102,9 @@
             if(element.classList.contains("active")){
                 const botoes =  document.querySelectorAll(".active");
                 
-                if(element === botoes[0]) return window.location.href = "../pages/saldo.html";
+                if(element === botoes[0]) return window.location.href = "../pages/Saldo.html";
 
-                if(element === botoes[1]){
-                    console.log("Extrato");
-                }
+                if(element === botoes[1]) return window.location.href = "../pages/Extrato.html";
 
                 if(element === botoes[2]){
                     console.log("Sacar");

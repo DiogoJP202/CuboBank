@@ -17,7 +17,6 @@ const enviaFormulario = event => {
     let posicaoUsuario = 0;
 
     for(let user of usuarios){ // Verifica os nomes de usuários do armazenamento local
-        console.log(user, usuarios, usuario, senha)
         if(user.usuario === usuario && user.senha === senha){
             validado = true;
             break;
