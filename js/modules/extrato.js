@@ -27,7 +27,7 @@ for(let contador = 1; contador <= Math.ceil(valores.length / 5); contador++){ //
 document.addEventListener("click", event => {
     const element = event.target;
 
-    if(element.classList.contains("active")) return window.location.href = "../../pages/Operacoes.html";
+    if(element.classList.contains("active")) return window.location.href = "../../pages/CuboBank/Operacoes.html";
 
     if(element.classList.contains("left")){
         if(contador === 0) return;

@@ -11,5 +11,5 @@ saldo.innerHTML = `R$ ${usuarios[localStorage.getItem("posicaoUsuario")].saldo}`
 document.addEventListener("click", event => {
     const element = event.target;
 
-    if(element.classList.contains("active")) return window.location.href = "../../pages/Operacoes.html";
+    if(element.classList.contains("active")) return window.location.href = "../../pages/CuboBank/Operacoes.html";
 });

@@ -43,7 +43,7 @@ const enviaFormulario = event => {
     localStorage.setItem('usuarios', JSON.stringify(usuarios)); // Adiciona as informações do usuário para o armazenamento local.
 
     alert('Usuário cadastrado com sucesso!');
-    window.location.href = "../../pages/Login.html"; // Muda o a página atual para a de login.
+    window.location.href = "../../pages/CuboBank/Login.html"; // Muda o a página atual para a de login.
 };
 
 form.addEventListener("submit", enviaFormulario);

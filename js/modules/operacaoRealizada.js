@@ -12,8 +12,8 @@ document.addEventListener("click", event => {
     if(element.classList.contains("active")){
         const botoes =  document.querySelectorAll(".active");
         
-        if(element === botoes[0]) return window.location.href = "../../pages/Operacoes.html";
+        if(element === botoes[0]) return window.location.href = "../../pages/CuboBank/Operacoes.html";
 
-        if(element === botoes[1]) return window.location.href = "../../pages/Sacar.html";
+        if(element === botoes[1]) return window.location.href = "../../pages/CuboBank/Sacar.html";
     };
 });
