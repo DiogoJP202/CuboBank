@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assets/styles/Mobile.css" media="all">
     <link rel="stylesheet" href="../assets/styles/MediaQueries.css">
     <link rel="stylesheet" href="../assets/styles/operacoes.css">
+    <link rel="stylesheet" href="../assets/styles/animacaoErro.css">
     <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
     <style>
         .saldo{
@@ -36,6 +37,27 @@
         .operacao{
             width: 45%;
         }
+
+        #conteudo .linha:first-of-type{
+            position: relative;
+            top: 27px;
+        }
+
+        #conteudo form{
+            justify-content: center;
+            top: 4%;
+            position: relative;
+            height: 30%;
+            font-size: 0.9em;
+        }
+        
+        #Teclado #numeros .numero{
+            color: #0f0;
+        }
+
+        #conteudo form input[type=text], #conteudo form input[type=number] {
+            padding: 0;
+        }
     </style>
 </head>
 <body>
@@ -55,19 +77,22 @@
             <section class="botoes">
                 <button class="active"></button>
                 <button class="btnAbaixo"></button>
-                <button class="btnAbaixo"></button>
+                <button class="btnAbaixo active"></button>
             </section>
             <div id="tela">
                 <div id="conteudo">
                     <h2>
-                        SALDO
+                        TRANSFERÊNCIA
                     </h2>
                     <div class="linha">
                         &larr; <div class="operacao">VOLTAR</div>
                     </div>
-                    <div class="saldo">
-                        <h2>Saldo Atual</h2>
-                        <p class="textoSaldo"></p>
+                    <form>
+                        <label for="Iconta">Número da conta: </label> <input type="number" name="conta" id="Iconta" placeholder="Valor aqui! (8 dígitos)" minlength="8" maxlength="8">
+                        <label for="Itransferencia">Quantidade a ser transferida: </label> <input type="number" name="transferencia" id="Itransferencia" placeholder="Valor aqui">
+                    </form>
+                    <div class="linha">
+                        &larr; <div class="operacao">SACAR</div>
                     </div>
                 </div>
             </div>
@@ -107,6 +132,6 @@
             </section>
         </footer>
     </main>
-    <script type="module" src="../js/modules/Saldo.js"></script>
+    <script type="module" src="../js/modules/transferencia.js"></script>
 </body>
 </html>

@@ -18,9 +18,7 @@ document.addEventListener("click", e => {
 
         if(element === botoes[3]) return window.location.href = "../../pages/Deposito.html";
 
-        if(element === botoes[4]){
-            console.log("Transferência");
-        }
+        if(element === botoes[4]) return window.location.href = "../../pages/Transferencia.html";
 
         if(element === botoes[5]) {
             let confirmacao = window.confirm("deseja sair de sua conta?");

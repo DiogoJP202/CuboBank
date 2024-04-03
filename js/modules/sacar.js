@@ -37,7 +37,7 @@ const enviaFormulario = event => {
         return window.location.href = "../../pages/OperacaoRealizada.html";
     };
 
-    alert("senha invalída.");
+    alert("senha inválida.");
     erro();
 };
 

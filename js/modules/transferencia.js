@@ -5,29 +5,45 @@ import erro from "./erroEmTela.js";
 const enviaFormulario = event => {
     if(event !== undefined) event.preventDefault();
 
-    let deposito = Number(document.querySelector("#Ideposito").value);
+    let tranferencia = Number(document.querySelector("#Itransferencia").value);
+    let conta = Number(document.querySelector("#Iconta").value);
     let usuario = JSON.parse(localStorage.getItem("usuarios"))[localStorage.getItem("posicaoUsuario")];
     let saldoUsuario = usuario.saldo;
     let extrato = usuario.extrato;
 
-    if(deposito <= 0){
-        alert("O valor do deposito precisa ser pelo menos R$ 1.");
+    if(tranferencia > saldoUsuario){
+        alert("Saldo insuficiente!");
         return erro();
     };
+
+    if(tranferencia <= 0){
+        alert("O valor da tranferência precisa ser pelo menos R$ 1.");
+        return erro();
+    };
+
+    if(conta.leght < 8 || conta.leght > 8){
+        alert("O número da conta precisa ter apenas 8 números!");
+        return erro();
+    }
+
+    if(!conta){
+        alert("Valor de conta inválido!")
+        return erro();
+    }
 
     const senhaUsuario = usuario.senha
     const senha = prompt("Insira a senha: ");
     
     if(senha === senhaUsuario){
-        saldoUsuario = saldoUsuario + deposito;
+        saldoUsuario = saldoUsuario - tranferencia;
         let usuarios = JSON.parse(localStorage.getItem("usuarios"));
 
-        extrato.push(`Valor depositado <span class="positivo">R$ + ${deposito}</span>`);
+        extrato.push(`Valor tranferido <span class="negativo">R$ - ${tranferencia}</span> para a conta: ${conta}`);
 
         usuarios[localStorage.getItem("posicaoUsuario")].saldo = saldoUsuario;
         usuarios[localStorage.getItem("posicaoUsuario")].extrato = extrato;
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        localStorage.setItem("operacao", JSON.stringify(["DEPOSITO ", "O"]));
+        localStorage.setItem("operacao", JSON.stringify(["TRANSFERÊNCIA ", "A"]));
         
         return window.location.href = "../../pages/OperacaoRealizada.html";
     };
