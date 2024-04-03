@@ -14,6 +14,6 @@ document.addEventListener("click", event => {
         
         if(element === botoes[0]) return window.location.href = "../../CuboBank/pages/Operacoes.html";
 
-        if(element === botoes[1]) return window.location.href = "../../CuboBank/pages/Sacar.html";
+        if(element === botoes[1]) return window.location.href = `../../CuboBank/pages/${informacoes[2]}`;
     };
 });

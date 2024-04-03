@@ -27,7 +27,7 @@ const enviaFormulario = event => {
         usuarios[localStorage.getItem("posicaoUsuario")].saldo = saldoUsuario;
         usuarios[localStorage.getItem("posicaoUsuario")].extrato = extrato;
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        localStorage.setItem("operacao", JSON.stringify(["DEPOSITO ", "O"]));
+        localStorage.setItem("operacao", JSON.stringify(["DEPOSITO ", "O", "deposito.js"]));
         
         return window.location.href = "../../CuboBank/pages/OperacaoRealizada.html";
     };
