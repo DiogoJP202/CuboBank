@@ -10,7 +10,7 @@ document.addEventListener("click", e => {
     if(element.classList.contains("active")){
         const botoes =  document.querySelectorAll(".active");
         
-        if(element === botoes[0]) return window.location.href = "../../CuboBank/pages/Saldo.html";
+        if(element === botoes[0]) return window.location.href = "../../CuboBank/pages/saldo.html";
 
         if(element === botoes[1]) return window.location.href = "../../CuboBank/pages/Extrato.html";
 
