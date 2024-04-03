@@ -30,7 +30,7 @@
 
 ## 🔗 Links:
 - <a href="https://www.figma.com/file/sqCMtN7lLwFNWi2umwcnP1/Cube_ATM?type=design&node-id=0%3A1&mode=design&t=dv44jhsMIB9b6VlU-1">FIGMA</a></li>
-- <a href="https://diogojp202.github.io/FreedonLents/](https://diogojp202.github.io/CuboBank/index.html">Projeto</a></li>
+- <a href="https://diogojp202.github.io/CuboBank/index.html">Projeto</a></li>
 
 ## 👁‍🗨⚙ Características do site
 
