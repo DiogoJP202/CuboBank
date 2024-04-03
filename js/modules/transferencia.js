@@ -43,7 +43,7 @@ const enviaFormulario = event => {
         usuarios[localStorage.getItem("posicaoUsuario")].saldo = saldoUsuario;
         usuarios[localStorage.getItem("posicaoUsuario")].extrato = extrato;
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        localStorage.setItem("operacao", JSON.stringify(["TRANSFERÊNCIA ", "A", "transferencia.js"]));
+        localStorage.setItem("operacao", JSON.stringify(["TRANSFERÊNCIA ", "A", "Transferencia.html"]));
         
         return window.location.href = "../../CuboBank/pages/OperacaoRealizada.html";
     };
