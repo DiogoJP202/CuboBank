@@ -24,8 +24,13 @@ document.addEventListener("click", e => {
             console.log("Transferência");
         }
 
-        if(element === botoes[5]){
-            console.log("Sair");
-        }
-    }
+        if(element === botoes[5]) {
+            let confirmacao = window.confirm("deseja sair de sua conta?");
+            if(confirmacao === true){
+                let ligado = false;
+                localStorage.setItem('tela', ligado);
+                window.location.href = "../../index.html";
+            };
+        };
+    };
 });

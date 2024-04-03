@@ -7,6 +7,7 @@ const enviaFormulario = event => {
     let saque = Number(document.querySelector("#Isacar").value);
     let usuario = JSON.parse(localStorage.getItem("usuarios"))[localStorage.getItem("posicaoUsuario")];
     let saldoUsuario = usuario.saldo;
+    let extrato = usuario.extrato;
 
     const erro = () => {
         let tela = document.querySelector("#tela");
@@ -29,12 +30,16 @@ const enviaFormulario = event => {
     
     if(senha === senhaUsuario){
         saldoUsuario = saldoUsuario - saque;
-
         let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+
+        extrato.push(`Valor sacado <span class="negativo">R$ - ${saque}</span>`);
+
         usuarios[localStorage.getItem("posicaoUsuario")].saldo = saldoUsuario;
+        usuarios[localStorage.getItem("posicaoUsuario")].extrato = extrato;
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
         localStorage.setItem("operacao", JSON.stringify(["SAQUE ", "O"]));
-        return window.location.href = "../../pages/operacaoRealizada.html";
+        
+        return window.location.href = "../../pages/OperacaoRealizada.html";
     };
 
     alert("senha invalída.");
