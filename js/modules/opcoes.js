@@ -6,7 +6,7 @@ export default document.addEventListener("click", event => {
         if(confirmacao === true){
             let ligado = false;
             localStorage.setItem('tela', ligado);
-            window.location.href = "../../index.html";
+            window.location.href = "../../CuboBank/index.html";
         };
     };
 

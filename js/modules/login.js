@@ -28,7 +28,7 @@ const enviaFormulario = event => {
     if(validado === true){
         localStorage.setItem("usuarioAtual", usuario);
         localStorage.setItem("posicaoUsuario", posicaoUsuario);
-        return window.location.href = "../../pages/CuboBank/Operacoes.html"
+        return window.location.href = "../../CuboBank/pages/Operacoes.html"
     } 
     
     alert('Usuário ou Senha Inválidos!');

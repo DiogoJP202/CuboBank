@@ -29,7 +29,7 @@ const enviaFormulario = event => {
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
         localStorage.setItem("operacao", JSON.stringify(["DEPOSITO ", "O"]));
         
-        return window.location.href = "../../pages/CuboBank/OperacaoRealizada.html";
+        return window.location.href = "../../CuboBank/pages/OperacaoRealizada.html";
     };
 
     alert("senha inválida.");
@@ -42,7 +42,7 @@ document.addEventListener("click", event => {
     if(element.classList.contains("active")){
         const botoes =  document.querySelectorAll(".active");
         
-        if(element === botoes[0]) return window.location.href = "../../pages/CuboBank/Operacoes.html";
+        if(element === botoes[0]) return window.location.href = "../../CuboBank/pages/Operacoes.html";
 
         if(element === botoes[1]) enviaFormulario();
     };
